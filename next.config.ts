@@ -7,6 +7,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "www.artalegypt.com",
       },
+      {
+        protocol: "https",
+        hostname: "artaldevelopments-platonewcapital.com",
+      },
     ],
   },
 };

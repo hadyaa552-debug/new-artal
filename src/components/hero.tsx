@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { ChevronDown, MapPin } from "lucide-react";
+import { siteConfig } from "@/../configs/site";
 
 export default function Hero() {
   const [loaded, setLoaded] = useState(false);
@@ -15,10 +16,16 @@ export default function Hero() {
       id="hero"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Background layers */}
+      {/* Background Image */}
       <div className="absolute inset-0">
-        {/* Gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-dark via-primary to-primary-light" />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={siteConfig.images.hero}
+          alt="PLATÓ New Capital"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-dark/80 via-primary/70 to-primary/95" />
 
         {/* Decorative elements */}
         <div className="absolute top-20 left-10 w-72 h-72 bg-accent/5 rounded-full blur-[100px]" />
@@ -61,8 +68,11 @@ export default function Hero() {
           <span className="block font-[family-name:var(--font-display)] text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold gold-gradient mb-4 tracking-tight">
             PLATÓ
           </span>
-          <span className="block font-[family-name:var(--font-accent)] text-xl sm:text-2xl md:text-3xl text-cream/60 italic tracking-wide">
-            A Way of Movement
+          <span className="block text-lg sm:text-xl md:text-2xl text-cream/80 mt-2 font-semibold">
+            مجتمع سكني متكامل على 28 فدان في قلب R8
+          </span>
+          <span className="block font-[family-name:var(--font-accent)] text-base sm:text-lg text-cream/50 italic tracking-wide mt-2">
+            العاصمة الإدارية الجديدة
           </span>
         </h1>
 
@@ -75,7 +85,7 @@ export default function Hero() {
           <div className="inline-flex items-center gap-2 bg-accent/8 border border-accent/20 rounded-sm px-5 py-2.5">
             <MapPin className="w-4 h-4 text-accent" />
             <span className="text-cream/80 text-sm">
-              الحي السكني الثامن R8 — العاصمة الإدارية الجديدة
+              منطقة R8 — قطعة M2 — العاصمة الإدارية الجديدة
             </span>
           </div>
         </div>
@@ -87,17 +97,18 @@ export default function Hero() {
           }`}
         >
           {[
-            { value: "5%", label: "مقدم" },
-            { value: "12", label: "سنة تقسيط" },
-            { value: "2.27M", label: "يبدأ من" },
-            { value: "+27", label: "سنة خبرة" },
+            { value: "28", label: "فدان", sub: "مساحة المشروع" },
+            { value: "5%", label: "مقدم", sub: "أقل مقدم ممكن" },
+            { value: "12", label: "سنة", sub: "أقصى تقسيط" },
+            { value: "40%", label: "خصم", sub: "على الكاش" },
           ].map((item) => (
-            <div key={item.label} className="text-center p-4">
-              <div className="font-[family-name:var(--font-display)] text-2xl sm:text-3xl font-bold text-accent mb-1">
+            <div key={item.sub} className="text-center p-4 glass-card rounded-sm">
+              <div className="font-[family-name:var(--font-display)] text-2xl sm:text-3xl font-bold text-accent mb-0.5">
                 {item.value}
               </div>
-              <div className="text-cream/50 text-xs tracking-wider uppercase">
-                {item.label}
+              <div className="text-cream/70 text-sm font-semibold">{item.label}</div>
+              <div className="text-cream/30 text-[10px] tracking-wider mt-1">
+                {item.sub}
               </div>
             </div>
           ))}
@@ -117,7 +128,7 @@ export default function Hero() {
             <div className="absolute inset-0 bg-accent-light scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-right" />
           </a>
           <a
-            href={`https://wa.me/201116663367?text=${encodeURIComponent("مهتم بمشروع PLATÓ - العاصمة الإدارية الجديدة")}`}
+            href={`https://wa.me/201116663367?text=${encodeURIComponent("مهتم بمشروع PLATÓ - العاصمة الإدارية الجديدة R8")}`}
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-3.5 border border-accent/40 text-accent text-sm tracking-wider uppercase hover:bg-accent/10 transition-all duration-500"

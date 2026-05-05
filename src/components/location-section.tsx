@@ -1,15 +1,7 @@
 "use client";
 
-import { MapPin, Plane, Building, Landmark, Train, Globe } from "lucide-react";
-
-const landmarks = [
-  { icon: Plane, label: "مطار العاصمة الإدارية الدولي", distance: "دقائق" },
-  { icon: Building, label: "فندق الماسة", distance: "قريب" },
-  { icon: Landmark, label: "الحي الحكومي والنهر الأخضر", distance: "قريب" },
-  { icon: Train, label: "محطة المونوريل", distance: "دقائق" },
-  { icon: Globe, label: "حي السفارات والمنطقة الدبلوماسية", distance: "بالقرب" },
-  { icon: MapPin, label: "القاهرة الجديدة وطريق السويس", distance: "20 دقيقة" },
-];
+import { MapPin } from "lucide-react";
+import { siteConfig } from "@/../configs/site";
 
 export default function LocationSection() {
   return (
@@ -22,34 +14,58 @@ export default function LocationSection() {
             // الموقع
           </span>
           <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 mb-6">
-            <span className="gold-gradient">موقع استراتيجي في قلب R8</span>
+            <span className="gold-gradient">في قلب منطقة R8</span>
           </h2>
           <div className="section-divider mb-8" />
           <p className="max-w-2xl mx-auto text-cream/50 text-lg">
-            يتميز الحي السكني الثامن R8 بموقعه على ربوة مرتفعة عن سطح البحر، وقربه
-            من أهم المحاور والمعالم الرئيسية بالعاصمة الإدارية الجديدة
+            موقع مختار بعناية بالقرب من أهم المحاور الحيوية بالعاصمة الإدارية
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Map placeholder */}
-          <div className="glass-card rounded-sm overflow-hidden aspect-[4/3] lg:aspect-auto flex items-center justify-center relative group">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary-light to-dark" />
-            <div className="absolute inset-0 opacity-10"
-              style={{
-                backgroundImage: `radial-gradient(circle at 50% 50%, rgba(201,168,76,0.3) 0%, transparent 50%)`,
-              }}
-            />
-            <div className="relative text-center p-8">
-              <MapPin className="w-12 h-12 text-accent mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-cream mb-2">
-                الحي السكني الثامن R8
-              </h3>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+          {/* Location Images */}
+          <div className="space-y-4">
+            <div className="rounded-sm overflow-hidden group cursor-pointer">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={siteConfig.images.location}
+                alt="موقع بلاتو العاصمة الإدارية R8"
+                className="w-full h-auto object-cover rounded-sm transition-transform duration-700 group-hover:scale-105"
+              />
+            </div>
+            <div className="rounded-sm overflow-hidden group cursor-pointer">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={siteConfig.images.compound}
+                alt="كمبوند بلاتو العاصمة الإدارية"
+                className="w-full h-auto object-cover rounded-sm transition-transform duration-700 group-hover:scale-105"
+              />
+            </div>
+          </div>
+
+          {/* Landmarks */}
+          <div>
+            <h3 className="text-cream font-bold text-lg mb-6">
+              أبرز المعالم والطرق القريبة
+            </h3>
+            <div className="space-y-3 mb-8">
+              {siteConfig.nearbyLandmarks.map((landmark) => (
+                <div
+                  key={landmark}
+                  className="glass-card hover-gold rounded-sm p-4 flex items-center gap-4"
+                >
+                  <div className="w-10 h-10 flex items-center justify-center bg-accent/10 rounded-sm shrink-0">
+                    <MapPin className="w-4 h-4 text-accent" />
+                  </div>
+                  <span className="text-cream/80 text-sm font-medium">{landmark}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="glass-card rounded-sm p-6 text-center border-accent/20">
               <p className="text-cream/50 text-sm mb-4">
-                العاصمة الإدارية الجديدة، مصر
-              </p>
-              <p className="text-cream/30 text-xs mb-6">
-                مساحة الحي: 2,500 فدان
+                يتميز موقع بلاتو داخل R8 بالقرب من مراكز الأعمال والخدمات مع تحقيق
+                توازن مثالي بين الهدوء والحيوية
               </p>
               <a
                 href="https://maps.google.com/?q=New+Administrative+Capital+R8+Egypt"
@@ -61,26 +77,6 @@ export default function LocationSection() {
                 افتح على الخريطة
               </a>
             </div>
-          </div>
-
-          {/* Landmarks */}
-          <div className="space-y-4">
-            {landmarks.map((item) => (
-              <div
-                key={item.label}
-                className="glass-card hover-gold rounded-sm p-5 flex items-center gap-4"
-              >
-                <div className="w-12 h-12 flex items-center justify-center bg-accent/10 rounded-sm shrink-0">
-                  <item.icon className="w-5 h-5 text-accent" />
-                </div>
-                <div className="flex-1">
-                  <h4 className="text-cream font-semibold text-sm">{item.label}</h4>
-                </div>
-                <span className="text-accent text-xs font-bold bg-accent/10 px-3 py-1 rounded-sm">
-                  {item.distance}
-                </span>
-              </div>
-            ))}
           </div>
         </div>
       </div>

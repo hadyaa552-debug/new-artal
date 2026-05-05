@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Phone, Menu, X } from "lucide-react";
+import { siteConfig } from "@/../configs/site";
 
 const navLinks = [
   { label: "الرئيسية", href: "#hero" },
@@ -36,14 +37,12 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <a href="#hero" className="flex items-center gap-3 group">
-            <div className="flex flex-col">
-              <span className="font-[family-name:var(--font-display)] text-xl lg:text-2xl font-bold text-accent tracking-wider">
-                PLATÓ
-              </span>
-              <span className="text-[10px] text-cream/50 tracking-widest uppercase">
-                Artal Developments
-              </span>
-            </div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={scrolled ? siteConfig.images.logoColor : siteConfig.images.logoWhite}
+              alt="Artal Developments"
+              className="h-10 lg:h-12 w-auto object-contain transition-all duration-500"
+            />
           </a>
 
           {/* Desktop Nav */}

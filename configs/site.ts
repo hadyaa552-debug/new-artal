@@ -11,12 +11,28 @@ export const siteConfig = {
   email: "apkzoz85@gmail.com",
   ccEmail: "abdoo.elrean@gmail.com",
   whatsapp: "201116663367",
-  
+  area: "28 فدان",
+  plot: "قطعة M2",
+  cashDiscount: "40%",
+
   colors: {
-    primary: "#1a1a2e",    // Deep navy
-    accent: "#c9a84c",     // Gold
-    secondary: "#2d2d44",  // Dark purple-navy
-    light: "#f5f0e8",      // Warm cream
+    primary: "#1a1a2e",
+    accent: "#c9a84c",
+    secondary: "#2d2d44",
+    light: "#f5f0e8",
+  },
+
+  images: {
+    hero: "https://artaldevelopments-platonewcapital.com/wp-content/uploads/2026/04/plato-new-capital.webp",
+    location: "https://artaldevelopments-platonewcapital.com/wp-content/uploads/2026/04/plato-new-capital-location.webp",
+    compound: "https://artaldevelopments-platonewcapital.com/wp-content/uploads/2026/04/plato-compound.webp",
+    developer: "https://artaldevelopments-platonewcapital.com/wp-content/uploads/2026/04/artal-development.webp",
+    developerVision: "https://artaldevelopments-platonewcapital.com/wp-content/uploads/2026/04/artal-real-estate-development.webp",
+    prices: "https://artaldevelopments-platonewcapital.com/wp-content/uploads/2026/04/plato-new-capital-prices.webp",
+    units: "https://artaldevelopments-platonewcapital.com/wp-content/uploads/2026/04/plato-new-capital-units-size.webp",
+    discount: "https://artaldevelopments-platonewcapital.com/wp-content/uploads/2026/04/plato-new-capital-discount.webp",
+    logoWhite: "https://artaldevelopments-platonewcapital.com/wp-content/uploads/2026/04/artal-development-logo.webp",
+    logoColor: "https://artaldevelopments-platonewcapital.com/wp-content/uploads/2026/04/artal-development-logo-2.webp",
   },
 
   developer_info: {
@@ -27,43 +43,43 @@ export const siteConfig = {
     chairman: "م. عبد الحميد طه",
     ceo: "م. ماهر طه",
     hq: "شارع التسعين، التجمع الخامس، القاهرة الجديدة",
-    values: [
-      "ملكية مباشرة لجميع الأراضي والمشاريع",
-      "إطار قانوني كامل وشفافية في التعاملات",
-      "نظام مؤسسي متكامل",
-      "خبرة +27 سنة في السوق العقاري",
-    ],
   },
 
   units: [
-    { type: "1 غرفة نوم", typeEn: "1 Bedroom", price: "2,275,000", priceNum: 2275000 },
-    { type: "2 غرف نوم", typeEn: "2 Bedrooms", price: "3,410,000", priceNum: 3410000 },
-    { type: "3 غرف نوم", typeEn: "3 Bedrooms", price: "5,120,000", priceNum: 5120000 },
-    { type: "4 غرف نوم", typeEn: "4 Bedrooms", price: "7,200,000", priceNum: 7200000 },
-    { type: "دوبلكس", typeEn: "Duplex", price: "7,400,000", priceNum: 7400000 },
-    { type: "تاون هاوس", typeEn: "Townhouse", price: "15,750,000", priceNum: 15750000 },
+    { type: "1 غرفة نوم", typeEn: "1 Bedroom", price: "2,275,000", priceNum: 2275000, area: "يبدأ من 65 م²" },
+    { type: "2 غرف نوم", typeEn: "2 Bedrooms", price: "3,410,000", priceNum: 3410000, area: "110 - 125 م²" },
+    { type: "3 غرف نوم", typeEn: "3 Bedrooms", price: "5,120,000", priceNum: 5120000, area: "160 م²" },
+    { type: "4 غرف نوم", typeEn: "4 Bedrooms", price: "7,200,000", priceNum: 7200000, area: "200 م²" },
+    { type: "دوبلكس", typeEn: "Duplex", price: "7,400,000", priceNum: 7400000, area: "يبدأ من 225 م²" },
+    { type: "تاون هاوس", typeEn: "Townhouse", price: "15,750,000", priceNum: 15750000, area: "مساحات كبيرة" },
   ],
 
-  payment: {
-    downPayment: "5%",
-    installments: "12 سنة",
-    installmentsEn: "12 Years",
-  },
+  paymentPlans: [
+    { plan: "10% مقدم", details: "تقسيط حتى 10 سنوات", discount: "" },
+    { plan: "5% + 5% بعد 3 شهور", details: "تقسيط حتى 10 سنوات", discount: "" },
+    { plan: "10% مقدم", details: "تقسيط حتى 8 سنوات", discount: "خصم 7.5%" },
+    { plan: "10% مقدم", details: "تقسيط حتى 6 سنوات", discount: "خصم 15%" },
+    { plan: "10% مقدم", details: "تقسيط حتى 4 سنوات", discount: "خصم 22%" },
+    { plan: "15% + دفعات سنوية", details: "تقسيط حتى 12 سنة", discount: "" },
+    { plan: "10% على سنتين", details: "سداد مريح", discount: "خصم 30%" },
+    { plan: "كاش", details: "عرض محدود", discount: "خصم 40%" },
+  ],
 
-  r8Features: [
-    "قريب من مطار العاصمة الإدارية الدولي",
-    "على مقربة من فندق الماسة والحي الحكومي",
-    "إطلالة على النهر الأخضر",
-    "قريب من محطة المونوريل",
-    "بالقرب من حي السفارات والمنطقة الدبلوماسية",
-    "على ربوة مرتفعة عن سطح البحر",
-    "مساحة الحي 2,500 فدان",
+  nearbyLandmarks: [
+    "محور محمد بن زايد",
+    "الطريق الدائري الأوسطي",
+    "محور الأمل",
+    "طريق السويس",
+    "الحي الحكومي",
+    "الحي الدبلوماسي",
+    "النهر الأخضر",
+    "المدينة الرياضية",
   ],
 
   amenities: [
     { icon: "🏊", title: "حمامات سباحة", titleEn: "Swimming Pools" },
     { icon: "🏋️", title: "نادي رياضي", titleEn: "Gym & Fitness" },
-    { icon: "🌳", title: "مساحات خضراء", titleEn: "Green Spaces" },
+    { icon: "🌳", title: "مساحات خضراء ولاندسكيب", titleEn: "Green Spaces" },
     { icon: "🛡️", title: "أمن وحراسة 24/7", titleEn: "24/7 Security" },
     { icon: "🏥", title: "خدمات طبية", titleEn: "Medical Services" },
     { icon: "🎓", title: "مدارس دولية", titleEn: "International Schools" },

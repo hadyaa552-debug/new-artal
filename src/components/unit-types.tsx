@@ -15,23 +15,39 @@ const iconMap: Record<string, typeof BedDouble> = {
 export default function UnitTypes() {
   return (
     <section id="units" className="relative py-24 lg:py-32 bg-dark/30">
-      {/* Decorative border */}
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-accent/20 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
           <span className="text-accent text-sm tracking-[0.3em] uppercase">
-            // أنواع الوحدات
+            // أنواع الوحدات والأسعار
           </span>
           <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 mb-6">
-            <span className="gold-gradient">وحدات تناسب كل أسرة</span>
+            <span className="gold-gradient">تنوع حقيقي يلبي كل الاحتياجات</span>
           </h2>
           <div className="section-divider mb-8" />
           <p className="max-w-2xl mx-auto text-cream/50 text-lg">
-            تشكيلة متنوعة من الوحدات السكنية بمساحات مختلفة وأسعار تنافسية تبدأ من
-            2,275,000 جنيه مصري
+            وحدات سكنية متنوعة تبدأ من 65 متر بأسعار تبدأ من 2,275,000 جنيه مصري
           </p>
+        </div>
+
+        {/* Gallery row */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
+          {[
+            { src: siteConfig.images.prices, alt: "أسعار بلاتو العاصمة الإدارية" },
+            { src: siteConfig.images.units, alt: "مساحات وحدات بلاتو" },
+            { src: siteConfig.images.discount, alt: "خصومات بلاتو العاصمة الإدارية" },
+          ].map((img) => (
+            <div key={img.alt} className="rounded-sm overflow-hidden group cursor-pointer">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={img.src}
+                alt={img.alt}
+                className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+            </div>
+          ))}
         </div>
 
         {/* Units Grid */}
@@ -71,6 +87,12 @@ export default function UnitTypes() {
 
                 {/* Card Body */}
                 <div className="p-6">
+                  {/* Area */}
+                  <div className="mb-3 bg-primary/50 rounded-sm px-3 py-2 inline-block">
+                    <span className="text-cream/60 text-xs">المساحة: </span>
+                    <span className="text-cream text-xs font-bold">{unit.area}</span>
+                  </div>
+
                   <div className="mb-4">
                     <span className="text-cream/40 text-xs tracking-wider">
                       يبدأ من
@@ -88,6 +110,8 @@ export default function UnitTypes() {
                     <span>مقدم 5%</span>
                     <span className="w-1 h-1 bg-accent/30 rounded-full" />
                     <span>تقسيط 12 سنة</span>
+                    <span className="w-1 h-1 bg-accent/30 rounded-full" />
+                    <span className="text-accent">خصم كاش 40%</span>
                   </div>
 
                   <a
@@ -102,7 +126,6 @@ export default function UnitTypes() {
           })}
         </div>
 
-        {/* Note */}
         <p className="text-center text-cream/30 text-xs mt-8">
           * الأسعار المذكورة هي أسعار ابتدائية وقابلة للتغيير. للحصول على أحدث الأسعار تواصل معنا
         </p>

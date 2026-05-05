@@ -1,6 +1,7 @@
 "use client";
 
 import { Calendar, Globe2, Building2, Users } from "lucide-react";
+import { siteConfig } from "@/../configs/site";
 
 const stats = [
   { icon: Calendar, value: "1997", label: "سنة التأسيس" },
@@ -10,21 +11,9 @@ const stats = [
 ];
 
 const projects = [
-  {
-    name: "STRIDE",
-    location: "شارع التسعين - القاهرة الجديدة",
-    type: "مشروع متعدد الاستخدامات",
-  },
-  {
-    name: "CELLEN",
-    location: "القاهرة الجديدة",
-    type: "مساحات إدارية وأعمال",
-  },
-  {
-    name: "WELLEN",
-    location: "القاهرة الجديدة",
-    type: "مشروع طبي متكامل",
-  },
+  { name: "STRIDE", location: "شارع التسعين - القاهرة الجديدة", type: "مشروع متعدد الاستخدامات" },
+  { name: "CELLEN", location: "القاهرة الجديدة", type: "مساحات إدارية وأعمال" },
+  { name: "WELLEN", location: "القاهرة الجديدة", type: "مشروع طبي متكامل" },
 ];
 
 export default function AboutDeveloper() {
@@ -41,20 +30,36 @@ export default function AboutDeveloper() {
             <span className="gold-gradient">ارتال للتطوير العقاري</span>
           </h2>
           <div className="section-divider mb-8" />
-          <p className="max-w-3xl mx-auto text-cream/50 text-lg leading-relaxed">
-            شراكة مصرية سعودية بدأت رحلتها في 1997 بالمملكة العربية السعودية، وتوسعت إلى مصر لتقديم
-            مشاريع سكنية ومتعددة الاستخدامات بأعلى معايير الجودة والابتكار. تتميز ارتال بأن جميع
-            أراضيها ومشاريعها مسجلة باسم الشركة مباشرة، مع إطار قانوني واضح يحمي حقوق العملاء.
-          </p>
+        </div>
+
+        {/* Developer image + text */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mb-16">
+          <div className="rounded-sm overflow-hidden">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={siteConfig.images.developer}
+              alt="ارتال للتطوير العقاري Artal Developments"
+              className="w-full h-auto object-cover rounded-sm"
+            />
+          </div>
+          <div>
+            <p className="text-cream/60 text-lg leading-relaxed mb-6">
+              شراكة مصرية سعودية بدأت رحلتها في 1997 بالمملكة العربية السعودية، وتوسعت إلى مصر لتقديم
+              مشاريع سكنية ومتعددة الاستخدامات بأعلى معايير الجودة والابتكار. تتميز ارتال بأن جميع
+              أراضيها ومشاريعها مسجلة باسم الشركة مباشرة، مع إطار قانوني واضح يحمي حقوق العملاء.
+            </p>
+            <p className="text-cream/50 text-sm leading-relaxed">
+              اسم &quot;ارتال&quot; يعني القطيع — قوة موحدة تتحرك ككتلة واحدة. الحصان يرمز لقيم الشركة
+              في الرشاقة والقوة والرؤية. اليوم تواصل ارتال النمو مع التركيز على خلق مساحات تخدم
+              الحاضر والمستقبل.
+            </p>
+          </div>
         </div>
 
         {/* Stats */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-16">
           {stats.map((stat) => (
-            <div
-              key={stat.label}
-              className="glass-card rounded-sm p-6 text-center"
-            >
+            <div key={stat.label} className="glass-card rounded-sm p-6 text-center">
               <stat.icon className="w-6 h-6 text-accent mx-auto mb-3" />
               <div className="font-[family-name:var(--font-display)] text-2xl lg:text-3xl font-bold text-accent mb-1">
                 {stat.value}
@@ -71,16 +76,11 @@ export default function AboutDeveloper() {
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {projects.map((project) => (
-              <div
-                key={project.name}
-                className="glass-card hover-gold rounded-sm p-6 border-t-2 border-t-accent/30"
-              >
+              <div key={project.name} className="glass-card hover-gold rounded-sm p-6 border-t-2 border-t-accent/30">
                 <h4 className="font-[family-name:var(--font-display)] text-xl font-bold text-cream mb-2">
                   {project.name}
                 </h4>
-                <p className="text-accent text-xs font-semibold mb-2">
-                  {project.type}
-                </p>
+                <p className="text-accent text-xs font-semibold mb-2">{project.type}</p>
                 <p className="text-cream/40 text-sm">{project.location}</p>
               </div>
             ))}
@@ -95,18 +95,14 @@ export default function AboutDeveloper() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto">
             <div className="text-center">
               <div className="w-20 h-20 mx-auto mb-4 bg-accent/10 rounded-full flex items-center justify-center border border-accent/20">
-                <span className="font-[family-name:var(--font-display)] text-2xl text-accent font-bold">
-                  ع.ط
-                </span>
+                <span className="font-[family-name:var(--font-display)] text-2xl text-accent font-bold">ع.ط</span>
               </div>
               <h4 className="text-cream font-bold">م. عبد الحميد طه</h4>
               <span className="text-accent text-xs tracking-wider">Chairman</span>
             </div>
             <div className="text-center">
               <div className="w-20 h-20 mx-auto mb-4 bg-accent/10 rounded-full flex items-center justify-center border border-accent/20">
-                <span className="font-[family-name:var(--font-display)] text-2xl text-accent font-bold">
-                  م.ط
-                </span>
+                <span className="font-[family-name:var(--font-display)] text-2xl text-accent font-bold">م.ط</span>
               </div>
               <h4 className="text-cream font-bold">م. ماهر طه</h4>
               <span className="text-accent text-xs tracking-wider">CEO</span>
