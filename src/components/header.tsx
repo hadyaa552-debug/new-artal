@@ -62,11 +62,11 @@ export default function Header() {
           {/* CTA + Mobile Toggle */}
           <div className="flex items-center gap-3">
             <a
-              href="tel:01116663367"
+              href="tel:01002717977"
               className="hidden sm:flex items-center gap-2 bg-accent/10 hover:bg-accent/20 border border-accent/30 text-accent px-4 py-2 rounded-sm text-sm transition-all duration-300"
             >
               <Phone className="w-4 h-4" />
-              <span className="font-semibold" dir="ltr">01116663367</span>
+              <span className="font-semibold" dir="ltr">01002717977</span>
             </a>
 
             <button
@@ -98,11 +98,11 @@ export default function Header() {
             </a>
           ))}
           <a
-            href="tel:01116663367"
+            href="tel:01002717977"
             className="flex items-center gap-2 py-3 px-4 text-accent"
           >
             <Phone className="w-4 h-4" />
-            <span dir="ltr">01116663367</span>
+            <span dir="ltr">01002717977</span>
           </a>
         </nav>
       </div>
