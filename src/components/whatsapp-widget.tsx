@@ -5,7 +5,7 @@ export default function WhatsappWidget() {
 
   return (
     <a
-      href={`https://wa.me/201116663367?text=${message}`}
+      href={`https://wa.me/201002717977?text=${message}`}
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-24 left-4 sm:bottom-6 sm:left-6 z-40 w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg shadow-green-500/30 transition-all duration-300 hover:scale-110 group"
