@@ -50,10 +50,10 @@ export default function Footer() {
             </h4>
             <div className="flex items-center gap-3">
               {[
-                { label: "Facebook", href: "https://www.facebook.com/ArtalEgypt" },
-                { label: "Instagram", href: "https://www.instagram.com/artal_developments" },
-                { label: "YouTube", href: "https://www.youtube.com/@ARTALDEVELOPMENTS" },
-                { label: "LinkedIn", href: "https://www.linkedin.com/company/artaldevelopments/" },
+                { label: "Facebook", href: "https://www.facebook.com/" },
+                { label: "Instagram", href: "https://www.instagram.com/" },
+                { label: "YouTube", href: "https://www.youtube.com/" },
+                { label: "LinkedIn", href: "https://www.linkedin.com/" },
               ].map((s) => (
                 <a
                   key={s.label}
@@ -68,12 +68,12 @@ export default function Footer() {
             </div>
             <div className="mt-4">
               <a
-                href="https://www.artalegypt.com"
+                href=""
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-accent/60 text-sm hover:text-accent transition-colors"
               >
-                artalegypt.com
+                artalegypt
               </a>
             </div>
           </div>
@@ -87,7 +87,7 @@ export default function Footer() {
           <p className="text-cream/20 text-xs">
             تسويق بواسطة{" "}
             <a
-              href="https://grandeur-spaces.com"
+              href=""
               target="_blank"
               rel="noopener noreferrer"
               className="text-accent/40 hover:text-accent transition-colors"
