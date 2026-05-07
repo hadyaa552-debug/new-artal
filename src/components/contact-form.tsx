@@ -200,7 +200,7 @@ export default function ContactForm() {
           {/* Contact info sidebar */}
           <div className="lg:col-span-2 space-y-4">
             <a
-              href="tel:01116663367"
+              href="tel:01002717977"
               className="glass-card hover-gold rounded-sm p-5 flex items-center gap-4 group"
             >
               <div className="w-12 h-12 flex items-center justify-center bg-accent/10 rounded-sm shrink-0">
@@ -208,12 +208,12 @@ export default function ContactForm() {
               </div>
               <div>
                 <span className="text-cream/40 text-xs">اتصل بنا</span>
-                <div className="text-cream font-bold" dir="ltr">01116663367</div>
+                <div className="text-cream font-bold" dir="ltr">01002717977</div>
               </div>
             </a>
 
             <a
-              href="tel:16986"
+              href="tel:01002717977"
               className="glass-card hover-gold rounded-sm p-5 flex items-center gap-4 group"
             >
               <div className="w-12 h-12 flex items-center justify-center bg-accent/10 rounded-sm shrink-0">
@@ -221,12 +221,12 @@ export default function ContactForm() {
               </div>
               <div>
                 <span className="text-cream/40 text-xs">الخط الساخن - ارتال</span>
-                <div className="text-cream font-bold" dir="ltr">16986</div>
+                <div className="text-cream font-bold" dir="ltr">01002717977</div>
               </div>
             </a>
 
             <a
-              href={`https://wa.me/201116663367?text=${encodeURIComponent("مهتم بمشروع PLATÓ - العاصمة الإدارية")}`}
+              href={`https://wa.me/01002717977?text=${encodeURIComponent("مهتم بمشروع PLATÓ - العاصمة الإدارية")}`}
               target="_blank"
               rel="noopener noreferrer"
               className="glass-card hover-gold rounded-sm p-5 flex items-center gap-4 group"
@@ -251,7 +251,7 @@ export default function ContactForm() {
               <div>
                 <span className="text-cream/40 text-xs">البريد الإلكتروني</span>
                 <div className="text-cream font-bold text-sm" dir="ltr">
-                  info@artalegypt.com
+                  
                 </div>
               </div>
             </div>
