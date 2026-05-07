@@ -128,7 +128,7 @@ export default function Hero() {
             <div className="absolute inset-0 bg-accent-light scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-right" />
           </a>
           <a
-            href={`https://wa.me/201116663367?text=${encodeURIComponent("مهتم بمشروع PLATÓ - العاصمة الإدارية الجديدة R8")}`}
+            href={`https://wa.me/201002717977?text=${encodeURIComponent("مهتم بمشروع PLATÓ - العاصمة الإدارية الجديدة R8")}`}
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-3.5 border border-accent/40 text-accent text-sm tracking-wider uppercase hover:bg-accent/10 transition-all duration-500"
